@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Education - Susan Minayo</title>
+
+  <!-- ✅ Embedded CSS -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f8fb;
+      color: #333;
+    }
+
+    header {
+      background: #0077cc;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a.active {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #0077cc;
+      margin-bottom: 40px;
+    }
+
+    .edu-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 25px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .edu-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .edu-card h3 {
+      margin: 0;
+      color: #0077cc;
+    }
+
+    .edu-card .year {
+      font-size: 0.9em;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background: #eaeaea;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Susan Minayo</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="childhood.html">Childhood</a></li>
+        <li><a href="education.html" class="active">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="aspirations.html">Aspirations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>My Education Journey</h2>
+
+      <div class="edu-card">
+        <h3>Gatoto Community Primary School</h3>
+        <p class="year">2007 – 2014</p>
+        <p>Started my academic journey in Mukuru kwa Reuben, Nairobi, laying a strong foundation in literacy and numeracy skills.</p>
+      </div>
+
+      <div class="edu-card">
+        <h3>Secondary School (Sponsored by KWFT)</h3>
+        <p class="year">2015 – 2018 from Kinyui Girls High School</p>
+        <p>Successfully completed my KCSE with support from the Capture the Future program, which empowered me to pursue my dreams.</p>
+      </div>
+
+      <div class="edu-card">
+        <h3>Certificate & Diploma in Information Technology</h3>
+        <p class="year">2019 – 2022 from Kiriri Womens University</p>
+        <p>Acquired strong technical and practical skills in IT systems, networking, programming, and computer applications.</p>
+      </div>
+
+      <div class="edu-card">
+        <h3>Bachelor of Business Information Technology</h3>
+        <p class="year">2023 – Present at Zetech University</p>
+        <p>Currently pursuing a degree with a focus on systems analysis, web development, and database design.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Susan Minayo. All rights reserved.</p>
+  </footer>
+
+  <!-- ✅ JavaScript for animation -->
+  <script>
+    // Animate cards when the page loads
+    window.addEventListener('load', () => {
+      const cards = document.querySelectorAll('.edu-card');
+      cards.forEach((card, index) => {
+        setTimeout(() => {
+          card.classList.add('visible');
+        }, index * 300); // Stagger animations
+      });
+    });
+  </script>
+
+</body>
+</html>

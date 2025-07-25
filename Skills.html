@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills & Talents - Susan Minayo</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f1f6fa;
+      color: #333;
+    }
+
+    header {
+      background: #005b96;
+      color: #fff;
+      padding: 20px 0;
+    }
+
+    .centered-title {
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 10px 0 0;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    h2 {
+      text-align: center;
+      color: #005b96;
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 91, 150, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .skill-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 91, 150, 0.15);
+    }
+
+    .skill-card h4 {
+      margin: 0;
+      font-size: 18px;
+      color: #0077cc;
+    }
+
+    footer {
+      text-align: center;
+      background: #005b96;
+      color: white;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
+  </style>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="centered-title">Susan Minayo</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="childhood.html">Childhood</a></li>
+          <li><a href="education.html">Education</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="aspirations.html">Aspirations</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>Professional Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card"><h4>Technical Solution Development</h4></div>
+        <div class="skill-card"><h4>Incident Management</h4></div>
+        <div class="skill-card"><h4>System Monitoring</h4></div>
+        <div class="skill-card"><h4>User Management</h4></div>
+        <div class="skill-card"><h4>Remote Access</h4></div>
+        <div class="skill-card"><h4>Helpdesk Support</h4></div>
+        <div class="skill-card"><h4>Hardware Troubleshooting</h4></div>
+        <div class="skill-card"><h4>Software Installation</h4></div>
+        <div class="skill-card"><h4>Vendor Coordination</h4></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Susan Minayo. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Animate skill cards on scroll and on page load
+    function animateSkillCards() {
+      const cards = document.querySelectorAll('.skill-card');
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        if (rect.top <= window.innerHeight - 100) {
+          card.classList.add('visible');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', animateSkillCards);
+    window.addEventListener('DOMContentLoaded', animateSkillCards);
+  </script>
+</body>
+</html>
+✅

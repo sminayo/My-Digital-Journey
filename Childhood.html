@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Childhood - Susan Minayo</title>
+
+  <!-- CSS Styling -->
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fef9f0;
+      margin: 0;
+      color: #333;
+    }
+
+    header {
+      background-color: #0077cc;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a.active {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px 40px 20px;
+    }
+
+    h2 {
+      color: #0077cc;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .memory {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .memory h3 {
+      margin-top: 0;
+      color: #005fa3;
+    }
+
+    .more-memories {
+      display: none;
+      margin-top: 10px;
+      color: #444;
+    }
+
+    .toggle-btn {
+      background-color: #0077cc;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 1em;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .toggle-btn:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      background-color: #eaeaea;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Childhood Memories</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="childhood.html" class="active">Childhood</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="aspirations.html">Aspirations</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container">
+      <h2>My Childhood Journey</h2>
+
+      <div class="memory">
+        <h3>Growing up in Mukuru kwa Reuben</h3>
+        <p>I was born  on 5 of December 1998 and raised in the vibrant Mukuru kwa Reuben community in Nairobi. My early years were filled with laughter, family gatherings, and the rich culture of our neighborhood.</p>
+      </div>
+
+      <div class="memory">
+        <h3>Favourite childhood memory</h3>
+        <p>One of my favorite pastimes was playing "Hide and Seek" with my friends, a traditional game that taught me teamwork and strategy.</p>
+      </div>
+      
+
+      <div class="memory">
+        <h3>Family Support and Values</h3>
+        <p>My family instilled strong values in me, including perseverance, honesty, and kindness. These principles continue to guide me today.</p>
+
+        <div class="more-memories">
+          <p>Every weekend, we would gather to share stories, celebrate milestones, and support each other through challenges. These moments created an unbreakable bond within my family.</p>
+          <p>I also loved listening to my grandmother’s tales of resilience and hope, which inspired my dreams for a better future.</p>
+        </div>
+
+        <button type="button" class="toggle-btn" id="toggleBtn">Read More</button>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Susan Minayo. All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript for toggling more memories -->
+  <script>
+    const toggleBtn = document.getElementById('toggleBtn');
+    const moreMemories = document.querySelector('.more-memories');
+
+    toggleBtn.addEventListener('click', () => {
+      if (moreMemories.style.display === 'block') {
+        moreMemories.style.display = 'none';
+        toggleBtn.textContent = 'Read More';
+      } else {
+        moreMemories.style.display = 'block';
+        toggleBtn.textContent = 'Read Less';
+      }
+    });
+  </script>
+  
+</body>
+</html>
