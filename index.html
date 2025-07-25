@@ -52,7 +52,8 @@
       transition: background 0.3s ease;
     }
 
-    nav ul li a:hover, .current-page {
+    nav ul li a:hover,
+    nav ul li a.active {
       background-color: rgba(255, 255, 255, 0.2);
       border-radius: 5px;
     }
@@ -62,7 +63,6 @@
       padding: 60px 20px;
       text-align: center;
       position: relative;
-      overflow: hidden;
     }
 
     .hero-section::after {
@@ -169,12 +169,12 @@
       <h1>Susan Minayo</h1>
       <nav>
         <ul>
-           <li><a href="index.html">Home</a></li>
-        <li><a href="Childhood.html" class="active">Childhood</a></li>
-        <li><a href="Education.html">Education</a></li>
-        <li><a href="Skills.html">Skills</a></li>
-        <li><a href="Aspirations.html">Aspirations</a></li>
-        <li><a href="Contacts.html">Contact</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="Childhood.html">Childhood</a></li>
+          <li><a href="Education.html">Education</a></li>
+          <li><a href="Skills.html">Skills</a></li>
+          <li><a href="Aspirations.html">Aspirations</a></li>
+          <li><a href="Contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -186,7 +186,6 @@
         <img src="Susan.jpg" alt="Susan Minayo" onerror="this.style.display='none';" />
         <h2>Hello, I'm Susan Minayo</h2>
         <p>Welcome to my digital journey. Explore my childhood, education, skills, and aspirations.</p>
-       
       </div>
     </section>
 
@@ -197,14 +196,12 @@
           Results-driven <strong>ICT System Support Officer</strong> with extensive experience in troubleshooting, maintaining, and optimizing IT systems to ensure seamless operations. Skilled in hardware and software support, network administration, system security, and enterprise application support.
         </p>
         <p>
-          Adept at user management, access control, and password administration while ensuring
-          compliance with IT policies. Proficient in ticketing systems such as <strong>Jira</strong> and <strong>SysAid</strong> and well-versed in supporting core banking systems, cheque truncation systems, and other enterprise applications.
+          Adept at user management, access control, and password administration while ensuring compliance with IT policies. Proficient in ticketing systems such as <strong>Jira</strong> and <strong>SysAid</strong> and well-versed in supporting core banking systems, cheque truncation systems, and other enterprise applications.
         </p>
         <p>
-          Strong problem-solving abilities, excellent communication skills, and a proactive
-          approach to enhancing IT efficiency and user experience.
+          Strong problem-solving abilities, excellent communication skills, and a proactive approach to enhancing IT efficiency and user experience.
         </p>
-         <a href="education.html" class="btn">Explore My Journey</a>
+        <a href="Education.html" class="btn">Explore My Education</a>
       </div>
     </section>
   </main>
@@ -214,6 +211,7 @@
       <p>&copy; 2025 Susan Minayo. All rights reserved.</p>
     </div>
   </footer>
+
   <script>
     // Reveal About section on scroll
     window.addEventListener('scroll', function () {
